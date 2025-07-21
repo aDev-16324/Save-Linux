@@ -125,3 +125,9 @@ if ! shopt -oq posix; then
 fi
 ```
 If you changed ```.bashrc```, then download the other files, they're important(else you get errors).
+Where to put them?
+Put these in your home directory:
+
+- `~/.bashrc` – main config file
+- `~/bashguard.sh` – recursion guard (called early in `.bashrc`)
+- `~/bashguard.bashrc` – additional cleanup logic (optional)
