@@ -1,6 +1,6 @@
 # Save-Linux
 Please don't forget these files! They can save your Linux distro!
-Please edit ```.bashrc``` to this:
+Please edit `.bashrc` to this:
 ```bashrc
 . ~/bashguard.sh
 # Guard to stop recursion if the above fails
@@ -124,10 +124,19 @@ if ! shopt -oq posix; then
   fi
 fi
 ```
-If you changed ```.bashrc```, then download the other files, they're important(else you get errors).
+If you changed `.bashrc`, then download the other files, they're important(else you get errors).
 Where to put them?
 Put these in your home directory:
 
-- `~/.bashrc` – main config file
-- `~/bashguard.sh` – recursion guard (called early in `.bashrc`)
-- `~/bashguard.bashrc` – additional cleanup logic (optional)
+- `~/.bashrc` – main config file.
+- `~/bashguard.sh` – recursion guard (called early in `.bashrc`).
+- `~/bashguard.bashrc` – additional cleanup logic (optional).
+- `~/recovery.sh` – this is the recovery script, only works if you have ran `bashguard.sh`.
+
+Please use these commands and make sure to reboot your system:
+```bash
+chmod +x ~/bashguard.sh
+chmod +x ~/recovery.sh
+chmod +x ~/bashguard.bashrc
+```
+Thank you for reading this manual.
